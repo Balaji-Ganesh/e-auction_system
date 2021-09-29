@@ -1,0 +1,135 @@
+/*Styling the content..*/
+.banner{
+    background: #ffffff;
+    padding: 200px 100px 100px;
+    min-height: 100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .content{
+    max-width: 700px;
+}
+
+.banner .content h2{
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+}
+
+.banner .content p{
+    font-size: 1em;
+    color: rgb(12, 12, 12);
+}
+
+.banner .content a{
+    display: inline-block;
+    background-color: rgba(4, 176, 255, 0.774);
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.banner .image{
+    /*filter: invert(1);*/
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+/*Styling the footer..*/
+/*
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    min-height: 100vh;
+    flex-direction: column;
+    background: #ede7f6;
+}*/
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: rgba(4, 176, 255, 0.774);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .container .sec{
+    margin-right: 30px;
+}
+
+footer .container .sec.aboutus{
+    width: 40%;
+}
+
+footer .container h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 1.25px;
+}
+
+footer .container h2:before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 75px;
+    height: 5px;
+    background: #f00;
+}
+
+footer .container p{
+    color: #999;
+    
+}
+
+footer .sci li{
+    list-style: none;
+}
+
+footer .sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Set for right..*/
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+footer .sci li a .fa{
+    color: #fff;
+}
+
+footer .sci li a:hover{
+    background: #f00 
+}
+
+footer .quickLinks{
+    position: relative;
+    width: 25%;
+}
+/*
+footer .quickLinks ul li{
+    
+}*/

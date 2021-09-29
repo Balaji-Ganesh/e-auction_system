@@ -1,0 +1,151 @@
+@import url('https:fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+*{
+    font-family: 'Poppins', 'sans-serif';
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}   
+
+/*Styling the header..*/
+header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(4, 176, 255, 0.774)  ;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 15px 100px; 
+    z-index: 10;
+}
+
+header .logo{
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    font-weight: 600; 
+    max-width:50px;
+}
+
+header .logo .logo-img{
+    width: 50px;
+}
+
+header .navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+header .navigation li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+header .navigation li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header .navigation li a:hover{ 
+    color: #ffeb3b; 
+}
+
+header .search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+header .search input{
+    position: aboslute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0 10px 0 40px
+}
+
+
+header .search input::placeholder{
+    color: #fff
+}
+
+header .search .fa-search{
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    left: 10px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+
+/**Making it responsive..*/
+@media(max-width: 992px){
+    header ul{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh-80px);
+        padding: 50px 100px;
+        text-align: center;
+        overflow: auto;
+        transition: 0.5s;
+        background: #000;
+        flex-direction: column;
+    }
+    header ul li a{
+        margin: 5px 0;
+        font-size: 24px;
+    }
+    .toggle{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer; 
+    }
+    .toggle:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        box-shadow: 0 10px 0 #fff;
+        transition: 0.5s;
+    }
+    .toggle:after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    
+    header .active .toggle:before{
+        top: 14px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #fff;
+    }
+    header .active .toggle:after{
+        bottom: 14px;
+        transform: rotate(-45deg);
+    }
+}
