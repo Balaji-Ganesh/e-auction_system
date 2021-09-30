@@ -13,6 +13,7 @@ section{
     align-items: center;
     min-height: 100vh;
     padding: 150px 100px 100px;
+    text-align: right;
 }
 
 section img{
@@ -45,5 +46,10 @@ section:nth-child(odd){
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background: #111;
+    background: rgb(4, 176, 255);
+    color: #fff;
+    text-align: left;
+}
+section .content{
+    margin: 45px;
 }
