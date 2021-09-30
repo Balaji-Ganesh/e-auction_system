@@ -17,7 +17,7 @@
             <li><a href="#WhoWeAre">Who we are?</a></li>
             <li><a href="#procedure">Procedure</a></li>
             <li><a href="#delivery">Transportation & Delivery</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#faq-section">FAQ</a></li>
         </ul>
         <div class="toggle" onclick="toggle()"></div>
     </header>
@@ -57,20 +57,77 @@
         </div>
     </section>
 
-    <section id="faq">
-        <div class="content">
-            <h2>faq</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nostrum itaque. Officiis facilis perspiciatis dolore harum. Cum repudiandae sit quibusdam! Quam quo officia eum? Ipsa iste ratione est sit et!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore officia minus unde, blanditiis aspernatur dolore error delectus distinctio perspiciatis culpa eligendi repellat ut laborum nesciunt, nulla obcaecati vero porro.</p>
+    <section id="faq-section">
+        
+        <img src="../resources/faq.png">
+        <div class="faqs">
+            <h2 class="title">FAQs</h2>
+            <div class="faq">
+                <div class="question">
+                    <h3> What is JavaScript?</h3>
+                    <svg width="15" height="10" viewbox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" 
+                              stroke="white" 
+                              stroke-width="7" 
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="answer">
+                    <p>JavaScript is abreviated as JS. Its a programming language that conforms to the ECMAScipt specification.
+                        JavaScript is hihg-level, often just-in-time compiled, and multi-paradigm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3>Is it easy to learn HTML and CSS?</h3>
+                    <svg width="15" height="10" viewbox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" 
+                              stroke="white" 
+                              stroke-width="7" 
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="answer">
+                    <p>JIf you could put some interest, its simple and easy to understand.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3> What is Web development?</h3>
+                    <svg width="15" height="10" viewbox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" 
+                              stroke="white" 
+                              stroke-width="7" 
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="answer">
+                    <p>Its about building and maintanence of websites. Its the work that happens behind the scenes to make a websiet look great, work fast and perform well
+                    </p>
+                </div>
+            </div>
         </div>
-        <img src="../resources/guide.png">
+        
     </section>
 
     <script type="text/javascript">
+        // For toggling the nav bar when in responsively..
         function toggle(){
             var header = document.getElementById("header");
             header.classList.toggle('active');
         }
+        // for functioning of animation in FAQs..
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach(faq=>{
+            faq.addEventListener("click", ()=>{
+            faq.classList.toggle("active"); 
+            });
+        }); 
     </script>
 </body>
 </html>
