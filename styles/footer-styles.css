@@ -1,3 +1,4 @@
+/**Styling the footer**/
 footer{
     position: relative;
     width: 100%;
@@ -51,10 +52,13 @@ footer .container .section .socialSites li{
     justify-content: center;
     align-items: center; 
     text-decoration: none;
-    border-radius: 5px; 
+    border-radius: 5px;
+    opacity: 0.8;
 }
 .section .socialSites li a:hover{
-    background: rgba(142, 216, 250, 0.904);
+    opacity: 1;
+    border: 3px solid #fff;
+    transition: 0.2s ease;  
 }
 footer .info{
     position: relative
@@ -74,7 +78,9 @@ footer .section li a{
     color: #f7f7f7;
 }
 footer .section li a:hover{
-    color: #ffeb3b
+    color: #ffeb3b;
+    font-weight:bolder;
+    transition: 0.5s ease;
 }
 
 footer .section .info{

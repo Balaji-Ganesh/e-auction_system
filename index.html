@@ -36,7 +36,7 @@
     </div>
      
     <!--footer content-->
-    <footer>
+    <footer id="#footer">
         <div class="container">
             <div class="section aboutUs">
                 <h2> About us</h2>
@@ -94,5 +94,11 @@
         <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2021 HelloWorldWeb. All Rights Reserved.</p>
         <p>Image-Credits: freepik and flaticon.</p>
     </div>
+
+    <script>
+        $(function(){
+            $('#footer').load("views/footer.html");
+        });   
+    </script>
 </body>
 </html>
