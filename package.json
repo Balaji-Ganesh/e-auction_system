@@ -1,0 +1,30 @@
+{
+  "name": "e-auction_system",
+  "version": "1.0.0",
+  "description": "Current tasks: **** Page designs * Ashdeep: **Want to Auction?** * Shiva: **Explore Auctions** * Balaji: **How it works?**",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balaji-Ganesh/e-auction_system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balaji-Ganesh/e-auction_system/issues"
+  },
+  "homepage": "https://github.com/Balaji-Ganesh/e-auction_system#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

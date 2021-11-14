@@ -115,6 +115,7 @@ Explore some other websites and find out..
 1. Shall we have a separate format of login for bidder and auctioneer?
 	- if a login id for each. This even serves us the facility of **updating, retrieiving, accessing randomly** easily.
 	- else, we need to have to separate collections. And moreover, we need to make it in GUI too.
+
 2. What can one auction -- _Speaking generally_??
 	- Real estate
 		- Like, HMDA(Telangana) ... look [2]
@@ -286,3 +287,28 @@ Let's maintain these collections......
 * Make the db schemas, insert some test data -- via ThunderClient
 	* then go for UI.
 via eJS, as done in WebDevSimplified, Markdown blog.
+
+
+
+Task division:
+	
+@ShivRaj
+		Deadline handling, termination of event
+	
+@Ashdeep
+		1. Pass all the details to the database
+		2. And **sort** out the auctions based on the `publishDate` and time
+	
+@BalajiGanesh
+		1. Designing the page of Viewing Auctions -- eJS
+
+Deadline:
+	By the end of Wednesday
+
+**Conclusion:**
+* Addressed a challenge of handling event completion and winner declaration.
+* Overview of project implementation and DB details.
+* Tasks division
+
+
+Try forking the respository, and propose the changes and make a commit -- this way we can have the collaborative code.
