@@ -51,3 +51,30 @@ via gh-pages:
   https://youtu.be/F8s4Ng-re0E
 In heroku:
   https://youtu.be/dn4mmfbletg
+
+***
+***
+## Report of meetup n 14th November, 2021 , Sunday_2 (Childrens Day, in memory of former prime minister Pandit Jawahar lal Nehru's Birthday.)
+Task division:
+	
+@ShivRaj's [track here..](https://github.com/Balaji-Ganesh/e-auction_system/projects/1#card-72826251)
+   1. Auction's deadline handling, termination of event, declaring the winner.
+	
+@Ashdeep's [track here..](https://github.com/Balaji-Ganesh/e-auction_system/projects/1#card-72826277)
+   1. Pass all the details to the database
+	2. And **sort** out the auctions based on the `publishDate` and time
+	
+@BalajiGanesh's [track here..](https://github.com/Balaji-Ganesh/e-auction_system/projects/1#card-72826284)
+   1. Designing the page of Viewing Auctions -- eJS 
+
+Deadline:
+	By the end of Wednesday - 17th November, 2021
+
+**Conclusion:**
+* Addressed a challenge of handling event completion and winner declaration.
+* Overview of project implementation and DB details.
+* Tasks division
+
+
+Try forking the respository, and propose the changes and make a commit -- this way we can have the collaborative code.
+
