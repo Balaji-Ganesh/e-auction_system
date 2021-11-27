@@ -78,3 +78,7 @@ Deadline:
 
 Try forking the respository, and propose the changes and make a commit -- this way we can have the collaborative code.
 
+***
+Update about next project (in 3-2 sem)..<br/>
+Hint to proceed further: [Sneha Agarwal- Hostel Space](https://github.com/snehaagrawal070301/Hostel-Space#readme)
+
