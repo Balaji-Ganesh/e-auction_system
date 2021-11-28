@@ -1,0 +1,75 @@
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="auctionTitle" id="title" 
+        class="form-control" required value="<%= auction.auctionTitle%>" required>
+</div>
+
+<div class="form-group">
+    <label for="categories">Select Category</label>
+    <select>
+        <option value="Vehicles">       Vehicles</option>
+        <option value="AntiqueProducts">Antique Products</option>
+        <option value="Lands">          Lands</option>
+        <option value="Other" checked>  Other</option> <!-- when this is selected, enable a [input type="text"], and via JS make it happen-->
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="auctionSecurity">Security</label>
+        <input type="radio" name="auctionSecurity" value="Public" checked>
+            <label for="Public">Public</label>
+        <input type="radio" name="auctionSecurity" value="Private">
+            <label for="Private">Private</label>
+</div>
+
+<div class="form-group">
+    <label for="description">Description</label>
+        <textarea name="description" id="description" class="form-control"><%= auction.description%></textarea>    <!--"value"..? - Setting the default values to be the earlier edited ones-->
+</div>
+
+
+
+<!--
+    
+    ---------------- NOTE: Uncomment this, when could successfully upload the images to db and load back
+
+    <div class="form-group">
+    <label for="auctionImages">Select display image</label>
+        <input type="file" value="Upload display image"  name="auctionImages">
+</div> -->
+
+
+<div class="form-group">
+    <label for="auctionImages">Select display image</label>
+        <input type="text" placeholder="Place link..(dvlpmnt in progress)"  name="auctionImagesURL">
+</div> 
+
+<div class="form-group">
+    <label for="launchOn">Launch auction on</label>
+        <input type="date" name="launchOn" value="2021-11-21" required>
+        <!-- <input type="time" name="publishedOn" > -->
+</div>
+
+<div class="form-group">
+    <label for="closingOn">Close auction on</label>
+        <input type="date" name="closingOn" required>
+        <!-- <input type="time" name="publishedOn" > -->
+</div>
+
+<div class="form-group">
+    <label for="bidPrice">Start bid with: </label>
+        <input type="number" name="bidPrice" required>
+</div>
+
+<div class="form-group">
+    <label for="maxBidAmount">Set the max bid amount</label>
+        <input type="number" name="maxBidAmount" required>
+</div>
+
+<a href="/" class="btn btn-secondary mt-2">Cancel</a>
+<button type="submit" class="btn btn-primary mt-2">Save Auction</button>
+
+
+<br/>
+<br/>
+<label>This is just for functional purpose, this UI needs much improvements..!!</label>

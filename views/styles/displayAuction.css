@@ -1,0 +1,171 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: none;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    /* padding: 100px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8e5e5;
+}
+
+.auction-card{
+    /* width:100%; */
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+/** Styling the header part of auction.. **/
+.auction-card .auction-header{
+    width: 100%;
+    padding-left: 40px;
+    margin: 10px;
+    display: flex;
+    /* background-color: greenyellow; */
+}
+
+.auction-header .auction-title h2{
+    font-size: 2.0em;
+    margin:0 20 0 0;
+    padding-right:100px; 
+}
+
+.auction-header .auction-categories .category{
+    text-transform:capitalize;
+    padding:0 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(212, 212, 212);
+    color:blue;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.auction-header .auction-meta{
+    margin-left:10px;
+
+}
+.auction-header .auction-meta table tr td{
+    padding: 2px;
+}
+
+.auction-header .auction-meta table tr td .key{
+    font-weight: 600;
+    direction: rtl;
+    color:gray;
+}
+
+.auction-header .auction-meta table tr td .value{
+    font-weight: 350;
+}
+
+/*Styling the body of the auction...*/
+.auction-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start
+}
+.auction-body .leftPane{
+    max-width:40%;
+    height: 100vh;
+    /* background-color: hotpink; */
+    padding: 20px;
+}
+.auction-body .leftPane .product-snapshots{
+    
+}
+
+.leftPane img{
+    max-width:90%;
+}
+.leftPane .hosting-details .auctioneer{
+    display: flex;
+    align-items:flex-end;
+    width:80%;
+    margin-left: 20px;
+}
+.leftPane .hosting-details img{
+    width:50px;
+    height: 50px;
+}
+leftPane .hosting-details .details{
+    margin-left: 10px;
+}
+.leftPane .hosting-details .details .host-title{
+    font-weight:500;
+}
+
+/*Styling the right pane..*/
+.right-pane{
+    height: 100vh;
+    padding: 20px;
+}
+
+.right-pane .basic-details .section-header{
+    margin: 0;
+    font-weight: 300;
+    font-style: italic;
+    font-size:0.8em;
+}
+.right-pane table{
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    margin-bottom:1.5em;
+}
+.right-pane table tr .key {
+    direction: rtl;
+    font-weight: 600;
+    color:gray;
+    padding-right:15px;
+}
+.right-pane table tr .price{
+    background-color:rgb(212, 212, 212);
+    font-weight: 700;
+    
+}
+.right-pane table tr .value{
+    display: flex;
+    align-items: center;
+}
+.right-pane table tr .value i{
+    padding-right: 10px;
+}
+.right-pane table tr .value img{
+    width:30px;
+    height: 30px;
+}
+
+.right-pane table tr .value span{
+    font-style: italic;
+}
+
+.right-pane table tr .value .user-bids{
+    display:flex;
+    flex-direction:column;
+    /*background-color: red;*/
+    width: fit-content;
+    /* font-size: 600; */
+}
+
+
+
+
+
+
+/*why the below one not working..??*/
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 24%;
+  }

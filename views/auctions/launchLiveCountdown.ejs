@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Display | <%= auction.auctionTitle%></title>      <!--Later via JS, add the auction's title name...-->
+        <link href="../styles/displayAuction.css" rel="stylesheet" type="text/css">
+        <link href="../styles/test.css"  type="text/css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <header>
+            <p> Header section </p>
+            <p><%= auction.launchOn.toLocaleTimeString()%> Try getting UNIX format date to use in Js..</p>
+            <a href="auctions/"><i class="far fa-hand-point-left"></i> Back to Explore Auctions</a>
+        </header>
+        
+        <section>
+            <div class="container">
+                <div class="imageBox"></div>
+                <div class="countDownBox">
+                    <h2><span>Countdown to </span>  <!--<h2>Countdown to New Year<br/>-->
+                        <%= auction.auctionTitle%>                                <!--<span>20<i>22</i></span></h2>   for styles_1.css-->
+                    </h2>
+                    <div class="countDown">
+                        <div id="days">NA</div>
+                        <div id="hours">NA</div>
+                        <div id="minutes">NA</div>
+                        <div id="seconds">NA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            footer
+        </footer>
+
+        <script>
+            const dateStr = "<%= auction.launchOn.toLocaleTimeString()%>";
+            console.log(dateStr);
+            const countDownDate = new Date(dateStr).getTime();
+            //const countDownDate = new Date('21/11/2021, 05:30:00').getTime();
+            //const countDownDate = new Date('21/11/2021, 05:30:00').getTime();
+            function newYear(){
+                const currentDate = new Date().getTime();
+                timeDifference = countDownDate - currentDate;
+                
+                // constants that help in calculating time difference..
+                const second = 1000;
+                const minute = second* 60;
+                const hour = minute*60;
+                const day = hour * 24;
+                
+                // Calculating the difference in days, hours, minutes and seconds..
+                const diff_days     = Math.floor( timeDifference / (day));
+                const diff_hours    = Math.floor((timeDifference % (day))    / (hour));
+                const diff_minutes  = Math.floor((timeDifference % (hour))   / (minute));
+                const diff_seconds  = Math.floor((timeDifference % (minute)) / (second));
+
+                // Write in the HTML tags, to finally display it..
+                document.getElementById("days").innerText    = diff_days;
+                document.getElementById("hours").innerText   = diff_hours;
+                document.getElementById("minutes").innerText = diff_minutes;
+                document.getElementById("seconds").innerText = diff_seconds;
+                console.log(diff_seconds);
+            }
+
+            // time to call the function..
+            setInterval(()=>newYear(), 1000);
+        </script>
+
+
+    </body>
+</html>
+
+<!--
+https://www.geeksforgeeks.org/how-to-send-an-email-from-javascript/
+https://www.geeksforgeeks.org/how-to-send-email-with-nodemailer-using-gmail-account-in-node-js/?ref=lbp
+-->
