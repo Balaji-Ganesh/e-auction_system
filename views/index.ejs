@@ -8,21 +8,11 @@
     <link href="styles/header-styling.css" rel="stylesheet" type="text/css">
     <link href="styles/footer-styles.css" rel="stylesheet" type="text/css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
 </head>
 <body> 
-    <!-- Heading content-->
-    <header><a href="#" class="logo"> <img class="logo-img" src="resources/auction_2.png"></a>
-        <ul class="navigation">
-            <li><a href="howItWorks.html">How it works?</a></li>
-            <li><a href="views/exploreAuctions.html">Explore Auctions</a></li>
-            <li><a href="views/wantToAuction.html">Want to Auction?</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li> 
-        </ul>
-        <div class="search">
-            <input type="text"  placeholder="Search our Inventory" /> <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
-    </header>
+    <!-- Header content-->
+    <%- include('header')%>
 
     <!-- Section content-->
     <div class="banner">
@@ -37,5 +27,18 @@
      
     <!--footer content-->
     <%- include('footer')%>
+
+    <script src="./scripts/header-sticky-script.js" type="text/javascript"></script>
 </body>
 </html>
+
+<!--
+
+    Here... also add the latest auctions and winners
+            and some of the users reviews..
+        
+        Remove the How it works.. and try placing that here...
+            and a convert the flow like: https://verzeo.com/ - how it works
+                             also like: https://www.sainya-ranakshetram.in/schedule/
+
+-->

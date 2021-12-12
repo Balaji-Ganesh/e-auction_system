@@ -1,58 +1,58 @@
 /*Styling the content..*/
 .banner{
-    background: #ffffff;
-    padding: 200px 100px 100px;
-    min-height: 100vh;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #ffffff;
+  padding: 200px 100px 100px;
+  min-height: 100vh;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .banner .content{
-    max-width: 700px;
+  max-width: 700px;
 }
 
 .banner .content h2{
-    font-size: 3em;
-    color: rgb(0, 0, 0);
+  font-size: 3em;
+  color: rgb(0, 0, 0);
 }
 
 .banner .content p{
-    font-size: 1em;
-    color: rgb(12, 12, 12);
+  font-size: 1em;
+  color: rgb(12, 12, 12);
 }
 
 .banner .content a{
-    display: inline-block;
-    background-color: rgba(4, 176, 255, 0.774);
-    color: #fff;
-    padding: 8px 20px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px;
-    border-radius: 10px;
+  display: inline-block;
+  background-color: rgba(4, 176, 255, 0.774);
+  color: #fff;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 .banner .content a:hover{
-    background:#fff;
-    border: 2px solid rgba(4, 176, 255, 0.774);
-    color:rgba(4, 176, 255, 0.774);
-    transition: 0.5s ease;
+  background:#fff;
+  border: 2px solid rgba(4, 176, 255, 0.774);
+  color:rgba(4, 176, 255, 0.774);
+  transition: 0.5s ease;
 }
 
 .banner .image{
-    /*filter: invert(1);*/
-    max-width: 600px;
-    margin-left: 50px;
+  /*filter: invert(1);*/
+  max-width: 600px;
+  margin-left: 50px;
 }
 
 /*Styling the footer..*/
 /*
 body{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; 
-    min-height: 100vh;
-    flex-direction: column;
-    background: #ede7f6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+  min-height: 100vh;
+  flex-direction: column;
+  background: #ede7f6;
 }*/

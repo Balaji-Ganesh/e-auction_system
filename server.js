@@ -5,7 +5,7 @@ const bcrypt        = require("bcrypt");
 const cookieParser  = require("cookie-parser");
 const { createTokens, validateToken } = require("./components/JWT");
 const auctionRouter = require('./routes/auctions.routes');
-const usersRouter   = require('./routes/user.routes');
+const userRouter   = require('./routes/user.routes');
 
 // Connect the middle-wares (done via "app.use(..)")
 //   -- via this, request comes and 
@@ -47,7 +47,7 @@ app.set('view engine', 'ejs')
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
 app.use('/auctions', auctionRouter);
-app.use('/users', usersRouter);
+app.use('/users', userRouter);
 //require("./routes/user.routes")(app);   // HigherOrderFunction, app object obeys the routes..
 
 //require("./routes/auctions.routes")(app);
@@ -55,15 +55,25 @@ app.use('/users', usersRouter);
 
 
 /****************** Routes ***************************** */
-app.get("/", async (request, response)=>{
-  //response.send("This is the home page");
-  const auctions = await db.auctions.find().sort({publishedOn: 'desc'})  // Can Set the sorting here...
-  response.render('auctions/listAuctions', {auctions: auctions});
-  //response.render('listAuctions');
+// Render the home page -- later add the functionality like Amazon/facebook. If already login (display their name) -- use middlewares in routes..
+app.get("/", (request, response)=>{
+  response.render('index.ejs');
 })
 
+// If related to auctions... directo from here..
+app.get("/auctions", auctionRouter);
+
+// If related to users... direct from here..
+//app.get("/users", usersRouter);
+app.get("/users", userRouter);
+
+app.get("/test", (request, response)=>{
+  response.send("test");
+});
+
+
 // set port, listen for requests
-const PORT = process.env.PORT || 3004;
+const PORT = process.env.PORT || 3009;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}...`);
 });

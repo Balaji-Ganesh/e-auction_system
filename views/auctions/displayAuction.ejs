@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Display | <%= auction.auctionTitle%></title>      <!--Later via JS, add the auction's title name...-->
-        <link href="../styles/displayAuction.css" rel="stylesheet" type="text/css">
+        <link href="../styles/auctions/displayAuction.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
     <body>
@@ -43,7 +43,7 @@
                             <div class="auctioneer">
                                 <img src="../resources/man.png" alt="auctioneer">
                                 <div class="details">
-                                    <span class="host-title">Hindustan Motors Ltd.</span><br/>
+                                    <span class="host-title"><%=  auctioneer.contactName.firstname+" "+auctioneer.contactName.lastname %></span><br/>
                                     <a href="#ViewAuctioneerDetails">View details....</a>
                                 </div>
                             </div>

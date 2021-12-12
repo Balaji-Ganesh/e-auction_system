@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Profile | <%= user.firstname+" "+user.lastname%></title>      <!--Later via JS, add the auction's title name...-->
+        <link href="../styles/users/viewProfile.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <header>
+            <p> Header section </p>
+            <a href="users/"><i class="far fa-hand-point-left"></i> Back</a>
+        </header>
+        <section>
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-title">
+                        <!-- <h2><%= user.contactName %></h2> -->
+                        <h2><%= user.contactName.firstname+" "+user.contactName.lastname %></h2>
+                    </div>
+                    
+                </div>
+
+                <div class="profile-body">
+                    <div class="leftPane">
+                        <div class="profile-img">
+                            <!-- <img src="<%=  user.auctionImagesURL %>" alt="auction-image"> -->
+                            <img src="../resources/woman.png" alt="auction-image">
+                        </div>
+                    </div>
+                    <div class="right-pane">
+                        <div class="basic-details">
+                            <p class="section-header">Contact Info</p>
+                            <hr/>
+                            <table>
+                                <tr>
+                                    <td class="key">Company/Organization name</td>  
+                                    <td class="value price"><i class="fas fa-university"></i><%=  user.orgName %></td>
+                                </tr>
+                                <tr>
+                                    <td class="key">Contact No</td>  
+                                    <td class="value"><i class="fas fa-phone-alt"></i> <%=  user.mobileNumber %> </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">email</td>  
+                                    <td class="value"> <i class="fas fa-at"></i> <%= user.email %> </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">Connect via</td>  
+                                    <td class="value">  <i class="far fa-sms"></i>
+                                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                        <a href="#"><i class="fab fa-reddit-alien"></i></a>
+                                            </td>   
+                                </tr>
+                            </table>
+                            <div class="bidding-details">
+                                <p class="section-header">Bidding Info</p>
+                                <hr/>
+                                <table>
+                                    <tr>
+                                        <td class="key">Total auctions hosted</td>  
+                                        <td class="value"><i class="fas fa-gavel"></i> <%= user.auctionsHosted.length%> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="key">Total bid Participations</td>  
+                                        <td class="value">
+                                            <i class="fas fa-gavel"></i> <%= user.auctionsParticipatedIn.length%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="key">Current highest bid amount</td>  
+                                        <td class="value">
+                                            <i class="fas fa-coins"></i>₹1,00,000/- <i>(In update..)</i>
+                                        </td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            footer
+        </footer>
+    </body>
+</html>

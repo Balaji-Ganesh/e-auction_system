@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const auctionSchema = new mongoose.Schema({
+const auctionSchema = mongoose.Schema({
         auctionTitle: {
             type: String,
             required: [true, "What's the auction title? - Set some title please"]
@@ -40,7 +40,7 @@ const auctionSchema = new mongoose.Schema({
         hostedBy: [{                                                // Array: If multiple people want to auction. But right now, don't think of it. Just added for flexibility
             type: mongoose.Schema.Types.ObjectId,
             ref: "users",
-            //required: [true, 'Who is hosting this auction?? - Set his _id']
+            required: [true, 'Who is hosting this auction?? - Set his _id']
         }],
         bidders:[{
             type: mongoose.Schema.Types.ObjectId,
@@ -91,5 +91,6 @@ auctionSchema.pre('validate', (next)=>{
 
     next();
 })
-// Now to use this defined schema, export it..
-module.exports = mongoose.model('Auctions', auctionSchema)   // to put it simply: Table with the name "Article", its schema is hold by @param-2
+// Now to use this defined schema, export it... creating the working model from the schema..mongoose.model(modelName, schema)
+var Auctions = mongoose.model('Auctions', auctionSchema)   // to put it simply: Table with the name "Article", its schema is hold by @param-2
+module.exports = Auctions;
